@@ -10,8 +10,7 @@ export default function part2() {
     let prevGreen = 0
     let prevBlue = 0
 
-    const [gameText, recordText] = line.split(':')
-    const [, gameId] = gameText.split(' ')
+    const [, recordText] = line.split(':')
     recordText.split(';').forEach((elm) => {
       elm.split(',').forEach((el) => {
         perSet.push(el)
@@ -19,15 +18,14 @@ export default function part2() {
     })
 
     for (const color of perSet) {
-      const realColor = color.replace(/\s[0-9]/g, '')
       const strNum = color.replace(/[^0-9]/g, '')
       const num = Number(strNum)
 
-      if (realColor.includes('red')) {
+      if (color.includes('red')) {
         prevRed = prevRed < num ? num : prevRed
-      } else if (realColor.includes('green')) {
+      } else if (color.includes('green')) {
         prevGreen = prevGreen < num ? num : prevGreen
-      } else if (realColor.includes('blue')) {
+      } else if (color.includes('blue')) {
         prevBlue = prevBlue < num ? num : prevBlue
       }
     }
