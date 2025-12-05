@@ -2,7 +2,7 @@ import { readFileSync } from 'fs'
 
 export const part1 = () => {
   let total = 0
-  const input = readFileSync('./day-1/files/input.txt', 'utf-8').split('\n')
+  const input = readFileSync('./2023/01/files/input.txt', 'utf-8').split('\n')
 
   for (const line of input) {
     let final = 0

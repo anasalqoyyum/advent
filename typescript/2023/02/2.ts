@@ -2,7 +2,7 @@ import { readFileSync } from 'fs'
 
 export default function part2() {
   let total = 0
-  const input = readFileSync('./day-2/files/input.txt', 'utf-8').split('\n')
+  const input = readFileSync('./2023/02/files/input.txt', 'utf-8').split('\n')
 
   for (const line of input) {
     let perSet: string[] = []
